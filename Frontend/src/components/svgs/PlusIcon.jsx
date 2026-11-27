@@ -1,0 +1,18 @@
+const PlusIcon = ({ color = "#0F3E69" }) => {
+  return (
+    <svg
+      width="18"
+      height="18"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M7.5 12.6344V11.3656H11.3458V7.40088H12.6542V11.3656H16.5V12.6344H12.6542V16.5991H11.3458V12.6344H7.5Z"
+        fill={color}
+      />
+    </svg>
+  );
+};
+
+export default PlusIcon;

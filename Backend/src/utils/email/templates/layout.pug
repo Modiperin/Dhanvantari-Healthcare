@@ -1,0 +1,208 @@
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(content="width=device-width, initial-scale=1.0" name="viewport")
+    block head
+      title= pageTitle || "Alliedge Healthcare" 
+    style.
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f5f7fa;
+      }
+      .email-container {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      .header {
+        background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+        color: white;
+        padding: 30px 40px;
+        text-align: center;
+        position: relative;
+      }
+      .header::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image:
+          radial-gradient(circle at 20% 20%, rgba(255,255,255,0.1) 2px, transparent 2px),
+          radial-gradient(circle at 80% 80%, rgba(255,255,255,0.1) 2px, transparent 2px);
+        background-size: 40px 40px;
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0px;
+        position: relative;
+        z-index: 1;
+      }
+      .logo-icon {
+        width: 50px;
+        height: 50px;
+        background-color: white;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+      .plus-icon {
+        color: #2563eb;
+        font-size: 28px;
+        font-weight: bold;
+      }
+      .company-name {
+        font-size: 24px;
+        font-weight: 600;
+        color: white;
+      }
+      .company-tagline {
+        font-size: 14px;
+        opacity: 0.9;
+        margin-top: 5px;
+      }
+      .content {
+        padding: 40px;
+      }
+      .greeting {
+        font-size: 18px;
+        margin-bottom: 20px;
+        color: #374151;
+      }
+      .message {
+        font-size: 16px;
+        line-height: 1.7;
+        margin-bottom: 30px;
+        color: #4b5563;
+      }
+      .security-notice {
+        background-color: #fef3c7;
+        border-left: 4px solid #f59e0b;
+        padding: 20px;
+        margin: 30px 0;
+        border-radius: 0 8px 8px 0;
+      }
+      .security-notice h3 {
+        color: #92400e;
+        font-size: 16px;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+      }
+      .security-notice h3::before {
+        content: '🔒';
+        margin-right: 8px;
+      }
+      .security-notice p {
+        color: #78350f;
+        font-size: 14px;
+        line-height: 1.5;
+      }
+      .support-section {
+        background-color: #f9fafb;
+        padding: 25px;
+        border-radius: 8px;
+        margin: 30px 0;
+        text-align: center;
+      }
+      .support-section h3 {
+        color: #374151;
+        font-size: 18px;
+        margin-bottom: 15px;
+      }
+      .support-section p {
+        color: #6b7280;
+        font-size: 14px;
+        margin-bottom: 15px;
+      }
+      .contact-info {
+        color: #2563eb;
+        font-weight: 600;
+        font-size: 16px;
+      }
+      .footer {
+        background-color: #1f2937;
+        color: white;
+        padding: 30px 40px;
+        text-align: center;
+      }
+      .footer-content {
+        font-size: 14px;
+        line-height: 1.6;
+        opacity: 0.8;
+      }
+      .footer-links {
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px solid #374151;
+      }
+      .footer-links a {
+        color: #60a5fa;
+        text-decoration: none;
+        margin: 0 15px;
+        font-size: 14px;
+      }
+      .footer-links a:hover {
+        color: #93c5fd;
+      }
+      .disclaimer {
+        font-size: 12px;
+        color: #9ca3af;
+        margin-top: 20px;
+        line-height: 1.4;
+      }
+      @media (max-width: 600px) {
+        .email-container {
+          margin: 0;
+          border-radius: 0;
+        }
+        .header, .content, .footer {
+          padding: 20px;
+        }
+      }
+
+  body
+    .email-container
+      .header
+        .logo
+          .logo-icon
+            span.plus-icon +
+          div
+            .company-name Alliedge
+            .company-tagline Healthcare
+      block content
+      .support-section
+        h3 Need Technical Support?
+        p
+          | If you're experiencing issues with the login process or have security concerns, our technical support team is here to help.
+        .contact-info 📞 +91-79-4040-5050 | 📧 support@alliedgehealthcare.com
+      .footer
+        .footer-content
+          strong Alliedge Healthcare
+          br
+          | India's #1 AI Powered SaaS Base HIMS
+          br
+          | Securing Healthcare Data with Advanced Technology
+        .footer-links
+          a(href="#") Privacy Policy
+          a(href="#") Terms of Service
+          a(href="#") Security Center
+          a(href="#") Contact Support
+        .disclaimer
+          | This email contains confidential and privileged healthcare information. If you are not the intended recipient, please delete this email immediately and notify the sender. This system is compliant with HIPAA, HITECH, and Indian healthcare data protection regulations.

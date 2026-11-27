@@ -1,0 +1,39 @@
+stages:
+  - deploy
+
+deploy_to_ec2:
+  stage: deploy
+  image: alpine:latest
+  only:
+    - production
+  before_script:
+    - apk add --no-cache openssh git curl
+    - mkdir -p ~/.ssh
+    - echo "$EC2_SSH_KEY_B64" | base64 -d > ~/.ssh/id_rsa
+    - chmod 600 ~/.ssh/id_rsa
+    - ssh-keyscan -H "$EC2_HOST_WEB_APP" >> ~/.ssh/known_hosts
+  script:
+    - echo "🚀 Deploying to EC2 $EC2_HOST_WEB_APP..."
+    - |
+      ssh ubuntu@$EC2_HOST_WEB_APP "
+        set -e
+        echo '📁 Changing to project directory...'
+        cd /home/ubuntu/web-app
+
+        echo '🔁 Switching to production branch...'
+        git checkout production
+
+        echo '🔄 Pulling latest code...'
+        git reset --hard HEAD
+        git clean -fd
+        git pull origin production
+
+        echo '📦 Installing dependencies...'
+        export NVM_DIR=\$HOME/.nvm
+        [ -s \"\$NVM_DIR/nvm.sh\" ] && \. \"\$NVM_DIR/nvm.sh\"
+        nvm use 22
+
+        npm install --legacy-peer-deps && npm run build
+
+        echo '✅ Deployment complete.'
+      "

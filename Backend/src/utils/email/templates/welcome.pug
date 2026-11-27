@@ -1,0 +1,129 @@
+extends layout.pug
+
+block head
+  title Welcome to Alliedge Healthcare
+  style.
+    .congratulations-section {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+    .congratulations-section h2 {
+      color: #2c5aa0;
+      font-size: 24px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+    .hospital-name {
+      color: #1e3a8a;
+      font-weight: 700;
+      font-size: 18px;
+    }
+    .info-box {
+      background-color: #f8fafc;
+      border-left: 4px solid #2c5aa0;
+      padding: 20px;
+      margin: 25px 0;
+      border-radius: 0 8px 8px 0;
+    }
+    .info-box h3 {
+      color: #1e3a8a;
+      margin-top: 0;
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+    .cta-button {
+      display: inline-block;
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      color: white;
+      padding: 15px 30px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 16px;
+      margin: 20px 0;
+      transition: transform 0.2s ease;
+    }
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(16, 185, 129, 0.3);
+    }
+    .divider {
+      height: 2px;
+      background: linear-gradient(90deg, #e5e7eb 0%, #d1d5db 50%, #e5e7eb 100%);
+      margin: 30px 0;
+      border: none;
+    }
+    .additional-info {
+      margin-top: 30px;
+      padding: 20px;
+      background-color: #f0f9ff;
+      border-radius: 8px;
+      border: 1px solid #0ea5e9;
+    }
+    .additional-info h3 {
+      color: #0c4a6e;
+      margin-top: 0;
+    }
+    .additional-info ul {
+      color: #374151;
+      margin: 10px 0;
+      padding-left: 20px;
+    }
+
+block content
+  .content
+    // Congratulations Section
+    .congratulations-section
+      h2 🎉 Welcome to Our Healthcare Management System
+      p
+        | We are thrilled to welcome 
+        span.hospital-name #{hospitalName}
+        |  to our comprehensive healthcare management platform.
+      p Your onboarding process has been completed successfully, and your hospital profile is now active in our system.
+
+    hr.divider
+
+    // Setup Information
+    .info-box
+      h3 📋 Your Hospital Profile Details
+      if hospitalName
+        p
+          strong Hospital Name:
+          |  #{hospitalName}
+      if primaryEmail
+        p
+          strong Primary Email:
+          |  #{email}
+      if mobileNumber
+        p
+          strong Contact Number:
+          |  #{phoneNo}
+      if departmentInfo
+        p
+          strong Department(s):
+          |  #{departmentInfo}
+      if doctorsInfo
+        p
+          strong Associated Doctors:
+          |  #{doctorsInfo}
+
+    // Next Steps
+    .text-center(style="text-align: center; margin: 35px 0;")
+      h3(style="color: #1e3a8a; margin-bottom: 20px;") 🔐 Complete Your Account Setup
+      p To get started, please click the button below to set up your password and complete your account configuration:
+      a.cta-button(href=setupLink) Complete Account Setup
+      p(style="font-size: 14px; color: #6b7280; margin-top: 15px;")
+        | This link will remain active for 48 hours. Please complete your setup within this timeframe.
+
+    hr.divider
+
+    // Additional Info Section
+    .additional-info
+      h3 💡 What's Next?
+      p Once you complete your account setup, you'll have access to:
+      ul
+        li Complete hospital management dashboard
+        li Patient management system
+        li Doctor and staff coordination tools
+        li Reporting and analytics features
+        li 24/7 technical support

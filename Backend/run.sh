@@ -1,0 +1,1 @@
+nodemon scripts/dev.js --exec babel-node --extensions '.js,.ts'
