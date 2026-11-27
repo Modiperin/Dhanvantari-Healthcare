@@ -16,7 +16,7 @@ export default {
     from: normalizedEntry.mailSender,
     replyTo: normalizedEntry.replyTo,
     to: [normalizedEntry.email],
-    subject: 'Your OTP for Admin Login – Alliedge Healthcare'
+    subject: 'Your OTP for Admin Login – Dhanvantari Healthcare'
   }),
   welcome: (normalizedEntry: DynamicObjectType) => ({
     html: compiledWelcomeHtml(normalizedEntry),
@@ -24,7 +24,7 @@ export default {
     replyTo: normalizedEntry.replyTo,
     to: [normalizedEntry.email],
     subject:
-      'Welcome to Alliedge Healthcare – Let’s Streamline Healthcare Together!'
+      'Welcome to Dhanvantari Healthcare – Let’s Streamline Healthcare Together!'
   }),
   appointment: (normalizedEntry: DynamicObjectType) => ({
     from: normalizedEntry.mailSender,

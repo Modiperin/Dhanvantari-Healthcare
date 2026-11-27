@@ -81,7 +81,7 @@ function createICS(event: {
   return [
     'BEGIN:VCALENDAR',
     'VERSION:2.0',
-    'PRODID:-//Alliedge Healthcare//Appointment System//EN',
+    'PRODID:-//Dhanvantari Healthcare//Appointment System//EN',
     'CALSCALE:GREGORIAN',
     'METHOD:REQUEST',
     'BEGIN:VEVENT',

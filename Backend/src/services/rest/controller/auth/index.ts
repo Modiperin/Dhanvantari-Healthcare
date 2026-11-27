@@ -86,7 +86,7 @@ export const ownerSignup = async (req: Request, res: Response) => {
 
   const hospitalData = {
     _id: hospitalId,
-    name: 'Alliedge Hospital',
+    name: 'Dhanvantari Hospital',
     email,
     userName: email, // email will be used as username
     role: 'O',

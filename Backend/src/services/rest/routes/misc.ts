@@ -27,7 +27,7 @@ const route = express.Router()
 
 route.get('/', (req, res) => {
   res.status(200).json({
-    message: 'Welcome to Alliedge HIS Backend API',
+    message: 'Welcome to Dhanvantari HIS Backend API',
     version: '1.0.0'
   })
 })
