@@ -1,23 +1,23 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import * as Dialog from "@radix-ui/react-dialog";
-import { cn } from "../../../lib/utils";
-import CloseIcon from "../../../assets/svg/circular-close.svg?react";
-import BlueCircularImage from "../../../assets/svg/circular-blue-logo.svg?react";
-import RightArrowIcon from "../../../assets/svg/arrow-right.svg?react";
-import { useForm } from "react-hook-form";
-import CommonTextarea from "../../../components/CommonTextarea";
-import AIProfileIcon from "../../../assets/svg/circular-white-logo.svg?react";
-import ChatLoading from "./ChatLoading";
-import { formatTimeToAMPM } from "../../../utils/dateAndTime";
-import DoubleTick from "../../../assets/svg/two-tick.svg?react";
-import { useDispatch, useSelector } from "react-redux";
-import { createChat, resetApiState } from "../../../slices/chatbotSlice";
-import { useEffect, useRef, useState } from "react";
-import { apiResponseType } from "../../../utils/types";
-import DownloadIcon from "../../../assets/svg/download.svg?react";
-import { downloadCSV } from "../../../utils/downloadCSV";
 import { zodResolver } from "@hookform/resolvers/zod";
+import * as Dialog from "@radix-ui/react-dialog";
+import { useEffect, useRef, useState } from "react";
+import { useForm } from "react-hook-form";
+import { useDispatch, useSelector } from "react-redux";
+import RightArrowIcon from "../../../assets/svg/arrow-right.svg?react";
+import BlueCircularImage from "../../../assets/svg/circular-blue-logo.svg?react";
+import CloseIcon from "../../../assets/svg/circular-close.svg?react";
+import AIProfileIcon from "../../../assets/svg/circular-white-logo.svg?react";
+import DownloadIcon from "../../../assets/svg/download.svg?react";
+import DoubleTick from "../../../assets/svg/two-tick.svg?react";
+import CommonTextarea from "../../../components/CommonTextarea";
+import { cn } from "../../../lib/utils";
+import { createChat, resetApiState } from "../../../slices/chatbotSlice";
+import { formatTimeToAMPM } from "../../../utils/dateAndTime";
+import { downloadCSV } from "../../../utils/downloadCSV";
+import { apiResponseType } from "../../../utils/types";
 import { chatQuerySchema } from "../validations";
+import ChatLoading from "./ChatLoading";
 // import SaveButton from "../../../components/Buttons/SaveButton";
 
 const quickReplies = [
@@ -451,10 +451,10 @@ const ChatboxModal = ({
                 <BlueCircularImage />
                 <div>
                   <h3 className="text-base font-semibold">
-                    Alliedge Healthcare{" "}
+                    Dhanvanatari Healthcare{" "}
                   </h3>
                   <p className="text-xs">
-                    I'm here to help you resolve any Alliedge Healthcare related
+                    I'm here to help you resolve any Dhanvanatari Healthcare related
                     queries. Please select from the following options.
                   </p>
                 </div>

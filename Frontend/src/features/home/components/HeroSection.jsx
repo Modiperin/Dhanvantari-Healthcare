@@ -30,12 +30,12 @@ const HeroSection = () => {
             + Real-time Healthcare Orchestration
           </div>
           <h1 className="text-6xl text-center text-[#0F3E69] leading-[72px]">
-            Alliedge Healthcare <br />
+            Dhanvanatari Healthcare <br />
             Healthcare Management Software
           </h1>
           <p className="text-[16px] max-w-[762px] mx-auto text-[#0F3E69]">
             India's #1 First innovative AI Powered SaaS Base HIMS <br />{" "}
-            Alliedge Healthcare is a real-time, AI-powered SaaS platform that
+            Dhanvanatari Healthcare is a real-time, AI-powered SaaS platform that
             automates hospital operations, improves communication, and delivers
             better care outcomes — all from a single dashboard.
           </p>

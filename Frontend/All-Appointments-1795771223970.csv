@@ -1,0 +1,11 @@
+visitNote,date,time,scheduleDate,status,name,gender,dateOfBirth,phoneNo,bloodGroup,doctorDetails.titleName,doctorDetails.name
+,"27-11-2026","06:00 AM","2026-11-27T00:30:00.000Z","completed","Satyam Singh","male","5-5-1985","9876543212","N/A","Dr.","Doctor Without Social,Awards and Publication"
+,"20-12-2026","01:00 PM","2026-12-20T07:30:00.000Z","booked","Ram","male","12-12-1965","7096227996","O+",,
+,"29-11-2026","05:05 PM","2026-11-29T11:35:00.000Z","booked","Satyam Singh","male","5-5-1985","9876543212","N/A","Dr.","Thomas White"
+,"23-12-2026","10:00 PM","2026-12-23T16:30:00.000Z","booked","SagarBhai Patel","male","25-4-1995","6355830393","O-","Dr.","Final Doctor 5"
+,"17-12-2026","03:55 PM","2026-12-17T10:25:00.000Z","cancelled","SagarBhai Patel","male","25-4-1995","6355830393","O-","Dr.","Kevin Anderson"
+,"08-12-2026","06:09 PM","2026-12-08T12:39:00.000Z","completed","Navin Mathew","male","23-11-1992","9537407968","A+","Dr.","David Miller"
+"notes","30-11-2026","11:20 AM","2026-11-30T05:50:00.000Z","completed","Navin Mathew","male","23-11-1992","9537407968","A+","Dr.","David Miller"
+"qwertyuikl","07-12-2026","04:23 PM","2026-12-07T10:53:00.000Z","completed","Patient with Allergies","male","24-11-2002","9537407968","O+","Dr.","Ram Manohar Lohia"
+"qwertyuiop","15-12-2026","04:24 PM","2026-12-15T10:54:00.000Z","completed","abcd","male","16-7-2022","9876543212","O+","Dr.","Ram Manohar Lohia"
+,"01-12-2026","12:05 PM","2026-12-01T06:35:00.000Z","booked","Harshal Kahar","male","11-12-1999","9537895647","O+","Dr.","Ram Manohar Lohia"

@@ -1,11 +1,10 @@
-import white_logo from "../../../../src/assets/images/logo/white-logo.png";
-import white_logo_2 from "../../../assets/images/logo/dhanvantari-logo-white.svg"
-import SliderButton from "./SliderButton";
 import { useEffect, useMemo, useState } from "react";
+import { useSelector } from "react-redux";
 import { useLocation, useNavigate } from "react-router-dom";
+import white_logo_2 from "../../../assets/images/logo/dhanvantari-logo-white.svg";
 import DoubleNext from "../../../components/svgs/DoubleNext";
 import { cn } from "../../../lib/utils";
-import { useSelector } from "react-redux";
+import SliderButton from "./SliderButton";
 
 const Sidebar = ({ data, isCollapsed, handleToggle }) => {
   const n = data?.length - 1;
@@ -85,18 +84,7 @@ const Sidebar = ({ data, isCollapsed, handleToggle }) => {
 
       <>
         <div className="flex flex-col p-2 lg:p-4">
-          {data.slice(0, n).map((item) => (
-            <SliderButton
-              key={item.id}
-              {...item}
-              isActive={active}
-              navigateSidebar={navigateSidebar}
-              isCollapsed={isCollapsed}
-            />
-          ))}
-        </div>
-        <div className="sticky left-5 right-5 top-full flex flex-col gap-3 p-2 lg:p-4">
-          {data.slice(n).map((item) => (
+          {data.slice(0, n+1).map((item) => (
             <SliderButton
               key={item.id}
               {...item}

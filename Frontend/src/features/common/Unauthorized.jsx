@@ -1,4 +1,3 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
 import Button from "../../components/Buttons/Button";
 import { ROUTES } from "../../routes/helper";
@@ -16,7 +15,7 @@ const Unauthorized = () => {
       </p>
       <p className="text-md text-gray-500 mb-6">
         If you think you should have access, please contact your hospital's
-        administrator who has the necessary permissions on Alliedge Healthcare
+        administrator who has the necessary permissions on Dhanvanatari Healthcare
         Platform.
       </p>
       <Button onClick={() => navigate(ROUTES.DASHBOARD)}>

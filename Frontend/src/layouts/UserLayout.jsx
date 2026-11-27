@@ -1,22 +1,18 @@
-import { Outlet, useLocation } from "react-router-dom";
-import ProtectedLayout from "./ProtectedLayout";
-import Sidebar from "../features/dashboard/components/Sidebar";
-import BuildingsIcon from "../assets/svg/buildings.svg?react";
-import CalenderIcon from "../assets/svg/calendar-tick.svg?react";
-import NurseOPDIcon from "../assets/svg/message-add.svg?react";
-import TopBar from "../components/TopBar";
-import ProfileIcon from "../assets/svg/profile-circle.svg?react";
-import UserTagIcon from "../assets/svg/user-tag.svg?react";
-import UserAdd from "../assets/svg/user-add.svg?react";
-import Patient from "../assets/svg/patient.svg?react";
-import DashboardIcon from "../assets/svg/dashboard.svg?react";
-import { ROUTES } from "../routes/helper";
-import { useSelector } from "react-redux";
-import PaymentIcon from "../assets/svg/payment.svg?react";
 import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
+import { Outlet, useLocation } from "react-router-dom";
+import BuildingsIcon from "../assets/svg/buildings.svg?react";
+import DashboardIcon from "../assets/svg/dashboard.svg?react";
+import NurseOPDIcon from "../assets/svg/message-add.svg?react";
+import Patient from "../assets/svg/patient.svg?react";
+import ProfileIcon from "../assets/svg/profile-circle.svg?react";
+import UserAdd from "../assets/svg/user-add.svg?react";
+import UserTagIcon from "../assets/svg/user-tag.svg?react";
+import TopBar from "../components/TopBar";
+import Sidebar from "../features/dashboard/components/Sidebar";
 import { useDocumentTitle } from "../hooks/useDocumentTitle";
-import AiIcon from "../assets/svg/Ai.svg?react";
-import ChatboxModal from "../features/ai-chat/components/ChatboxModal";
+import { ROUTES } from "../routes/helper";
+import ProtectedLayout from "./ProtectedLayout";
 
 const sidebars = (setChatOpen) => [
   {
@@ -50,14 +46,14 @@ const sidebars = (setChatOpen) => [
     to: ROUTES.REGISTRATION_CREATE,
     children: ["registration", "registrations"],
   },
-  {
-    id: "roaster",
-    label: "Roster Management",
-    moduleName: "roaster",
-    icon: CalenderIcon,
-    to: ROUTES.ROSTER_MANAGEMENT,
-    children: ["roster"],
-  },
+  // {
+  //   id: "roaster",
+  //   label: "Roster Management",
+  //   moduleName: "roaster",
+  //   icon: CalenderIcon,
+  //   to: ROUTES.ROSTER_MANAGEMENT,
+  //   children: ["roster"],
+  // },
   {
     id: "appointments",
     label: "Appointments",
@@ -90,22 +86,22 @@ const sidebars = (setChatOpen) => [
     icon: Patient,
     children: ["patients", "patient"],
   },
-  {
-    id: "pharmacy",
-    label: "Pharmacy",
-    moduleName: "pharmacy",
-    to: ROUTES.PHARMACY,
-    icon: BuildingsIcon,
-    children: ["pharmacy"],
-  },
-  {
-    id: "payment",
-    label: "Payment",
-    moduleName: "cashier",
-    to: ROUTES.PAYMENTS,
-    icon: PaymentIcon,
-    children: ["payments", "payment"],
-  },
+  // {
+  //   id: "pharmacy",
+  //   label: "Pharmacy",
+  //   moduleName: "pharmacy",
+  //   to: ROUTES.PHARMACY,
+  //   icon: BuildingsIcon,
+  //   children: ["pharmacy"],
+  // },
+  // {
+  //   id: "payment",
+  //   label: "Payment",
+  //   moduleName: "cashier",
+  //   to: ROUTES.PAYMENTS,
+  //   icon: PaymentIcon,
+  //   children: ["payments", "payment"],
+  // },
 
   // {
   //   id: "help-center",
@@ -113,15 +109,15 @@ const sidebars = (setChatOpen) => [
   //   icon: MessagesIcon,
   //   to: "/help-center",
   // },
-  {
-    id: "ai-chat",
-    label: "Chat with AI",
-    icon: AiIcon,
-    onClick: () => {
-      setChatOpen((prev) => !prev);
-    },
-    className: "animate-custom-border",
-  },
+  // {
+  //   id: "ai-chat",
+  //   label: "Chat with AI",
+  //   icon: AiIcon,
+  //   onClick: () => {
+  //     setChatOpen((prev) => !prev);
+  //   },
+  //   className: "animate-custom-border",
+  // },
 ];
 
 const HIDE_TOPBAR_ROUTES = [`${ROUTES.DOCTOR_OPD}/consultation`];
@@ -217,10 +213,6 @@ const UserLayout = () => {
           </div>
         </main>
       </div>
-
-      {isChatOpen && (
-        <ChatboxModal open={isChatOpen} onClose={() => setChatOpen(false)} />
-      )}
     </ProtectedLayout>
   );
 };
