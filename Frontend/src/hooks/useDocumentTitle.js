@@ -41,19 +41,19 @@ export const TITLE_MAP = {
   "patients/payments": "Patient Payments",
 
   // Payment
-  payments: "Payments",
-  payment: "Payment Details",
-  "payment/invoice-mangement": "Payment Invoice Management",
-  "payment/create": "Payment Create",
+  // payments: "Payments",
+  // payment: "Payment Details",
+  // "payment/invoice-mangement": "Payment Invoice Management",
+  // "payment/create": "Payment Create",
 
-  // Pharmacy
-  pharmacy: "Pharmacy Management",
-  "pharmacy/create": "Create Pharmacy",
-  "pharmacy/invoice-mangement": "Pharmacy Invoice Management",
+  // // Pharmacy
+  // pharmacy: "Pharmacy Management",
+  // "pharmacy/create": "Create Pharmacy",
+  // "pharmacy/invoice-mangement": "Pharmacy Invoice Management",
 };
 
 // Fallback title
-const DEFAULT_TITLE = "Alligedge Healthcare";
+const DEFAULT_TITLE = "Dhanvantari Healthcare";
 
 export const useDocumentTitle = () => {
   const location = useLocation();
